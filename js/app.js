@@ -1,5 +1,5 @@
 function addSoundToButton(playSound) {
-  var button = document.createElement("button");
+  var button = document.getElementById("airhorn-button");
   button.textContent = "Airhorn!";
   button.addEventListener('click', playSound);
   document.body.appendChild(button);
