@@ -1,4 +1,4 @@
-function buildButton(playSound) {
+function addSoundToButton(playSound) {
   var button = document.createElement("button");
   button.textContent = "Airhorn!";
   button.addEventListener('click', playSound);
@@ -12,7 +12,7 @@ function loadAudio() {
   request.responseType = "arraybuffer";
   request.addEventListener('load', function() {
     context.decodeAudioData(this.response, function(buffer) {
-      buildButton(function() {
+      addSoundToButton(function() {
         var source = context.createBufferSource();
         source.buffer = buffer;
         source.connect(context.destination);
